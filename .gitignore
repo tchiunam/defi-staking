@@ -1,0 +1,7 @@
+.env
+.history
+.hypothesis/
+.vscode/
+__pycache__
+build/
+reports/

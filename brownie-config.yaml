@@ -1,0 +1,31 @@
+
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.5.0
+  - smartcontractkit/chainlink-brownie-contracts@0.4.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0"
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0"
+dotenv: .env
+networks:
+  development:
+    verify: False
+  ganache:
+    verify: False
+  kovan:
+    weth_token: "0xd0a1e359811322d97991e03f863a0c30c2cf029c"
+    fau_token: "0xFab46E002BbF0b4509813474841E0716E6730136"
+    dai_usd_price_feed: "0x777A68032a88E5A84678A77Af2CD65A7b3c0775a"
+    eth_usd_price_feed: "0x9326BFA02ADD2366b30bacB125260Af641031331"
+    verify: True
+wallets:
+  local-cli:
+    - address: "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+      private_key: ${LOCAL_CLI_WALLET_0_PRIVATE_KEY}
+  local-ui:
+    - address: "0x087C56b7EFa666034dcBE93b92FB8e662F80B4dE"
+      private_key: ${LOCAL_UI_WALLET_0_PRIVATE_KEY}
+  metamask:
+    - address: "0x199b0021D48b938DF485d2e0748F3665438FAe7b"
+      private_key: ${METAMASK_WALLET_0_PRIVATE_KEY}
